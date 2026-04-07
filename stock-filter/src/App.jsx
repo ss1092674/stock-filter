@@ -15,7 +15,7 @@ function App() {
 
   // ✅ Fetch signals from backend
   const fetchData = () => {
-    fetch("http://localhost:5000/signals")
+    fetch("http://stock-filter-3ue4.onrender.com/signals")
       .then(res => {
         if (!res.ok) throw new Error("Fetch failed");
         return res.json();
@@ -64,7 +64,7 @@ function App() {
 
   // ✅ Initial load + interval refresh
   useEffect(() => {
-    fetch("http://localhost:5000/watchlist")
+    fetch("http://stock-filter-3ue4.onrender.com/watchlist")
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length) {
@@ -87,7 +87,7 @@ function App() {
 
   // ✅ Add stock
   const addStock = (stock) => {
-    fetch("http://localhost:5000/watchlist", {
+    fetch("http://stock-filter-3ue4.onrender.com/watchlist", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -100,7 +100,7 @@ function App() {
 
   // ✅ Remove stock
   const removeStock = (stock) => {
-    fetch(`http://localhost:5000/watchlist/${stock}`, {
+    fetch(`http://stock-filter-3ue4.onrender.com/watchlist/${stock}`, {
       method: "DELETE"
     })
       .then(res => res.json())
@@ -124,7 +124,7 @@ function App() {
                 onChange={(e) => {
                   const newInterval = e.target.value;
                   setCurrentInterval(newInterval);
-                  fetch("http://localhost:5000/set-interval", {
+                  fetch("http://stock-filter-3ue4.onrender.com/set-interval", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json"
