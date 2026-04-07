@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://stock-filter-t8jp.vercel.app/"
+      "https://stock-filter-t8jp.vercel.app"
     ],
     credentials: true
   })
