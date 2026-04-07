@@ -1,0 +1,146 @@
+/* 🌑 Global */
+body {
+  margin: 0;
+  background: #0e0e0e;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #222;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1a1a1a;
+  position: fixed;
+  top: 60px;
+  padding: 20px;
+}
+
+.sidebar p {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar p:hover {
+  background: #2a2a2a;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  margin-top: 70px;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.history-summary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.history-summary p {
+  margin: 8px 0 0;
+  color: #ccc;
+}
+
+/* Watchlist */
+.watchlist-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+/* Signals */
+.signal-card {
+  background: #1f1f1f;
+  padding: 15px;
+  border-left: 4px solid green;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.signal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.sell {
+  border-left-color: red;
+}
+
+/* Buttons */
+button {
+  background: #10b981;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Live Time */
+.live-time {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.time-display {
+  font-size: 2em;
+  font-weight: bold;
+  color: #10b981;
+  margin: 10px 0;
+}
+
+.date-display {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Timeframe Selector */
+.timeframe-selector {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.timeframe-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.timeframe-selector select {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
