@@ -152,6 +152,9 @@ app.post("/set-interval", (req, res) => {
     res.status(400).json({ error: "Invalid interval" });
   }
 });
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
 // ─── START SERVER ─────────────────────────
 app.listen(PORT, () => {
