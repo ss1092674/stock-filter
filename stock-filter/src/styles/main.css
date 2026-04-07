@@ -22,18 +22,26 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
-  height: 100vh;
+  width: 100%;
+  height: 50px;
   background: #1a1a1a;
   position: fixed;
   top: 60px;
-  padding: 20px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #222;
 }
 
 .sidebar p {
   cursor: pointer;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 4px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .sidebar p:hover {
@@ -42,8 +50,8 @@ body {
 
 /* Main */
 .main {
-  margin-left: 240px;
-  margin-top: 70px;
+  margin-left: 0;
+  margin-top: 120px;
   padding: 20px;
 }
 
@@ -143,4 +151,113 @@ button {
   border: 1px solid #444;
   padding: 5px 10px;
   border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+    padding: 0 10px;
+    font-size: 0.9em;
+  }
+
+  .sidebar {
+    height: 40px;
+    top: 50px;
+    padding: 0 10px;
+  }
+
+  .sidebar p {
+    padding: 6px 8px;
+    font-size: 0.8em;
+  }
+
+  .main {
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .signal-card {
+    padding: 10px;
+  }
+
+  .signal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timestamp {
+    margin-top: 5px;
+  }
+
+  .watchlist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .live-time {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .time-display {
+    font-size: 1.5em;
+  }
+
+  .timeframe-selector {
+    margin-bottom: 15px;
+  }
+
+  .timeframe-selector select {
+    width: 100%;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 45px;
+    padding: 0 5px;
+  }
+
+  .sidebar {
+    height: 35px;
+    top: 45px;
+    padding: 0 5px;
+  }
+
+  .sidebar p {
+    padding: 4px 6px;
+    font-size: 0.7em;
+  }
+
+  .main {
+    margin-top: 85px;
+    padding: 5px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .signal-card {
+    padding: 8px;
+  }
+
+  .live-time {
+    padding: 8px;
+  }
+
+  .time-display {
+    font-size: 1.2em;
+  }
 }
